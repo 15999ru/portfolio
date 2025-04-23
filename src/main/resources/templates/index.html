@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ru">
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title th:text="${title}" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/animations.css">
+</head>
+<body>
+    <div class="cursor-follower"></div>
+    <div th:insert="~{blocks/header :: head}"> </div>
+
+
+    <main class="container">
+        <section class="hero">
+            <div class="hero-content animate__animated animate__fadeInUp">
+                <h1 class="gradient-text">Привет, я <span class="typing-animation"></span></h1>
+                <p class="subtitle">Создаю цифровые продукты с душой</p>
+                
+                <div class="about-me glass-card">
+                    <div class="avatar-container">
+                        <img src="images/avatar.jpg" alt="Мое фото" class="avatar">
+                        <div class="tech-icons">
+                            <div class="icon java"></div>
+                            <div class="icon spring"></div>
+                            <div class="icon js"></div>
+                        </div>
+                    </div>
+                    <div class="bio">
+                        <div class="bio-item">
+                            <div class="decor-circle"></div>
+                            <p>Опыт: <span class="highlight">5+ лет</span> в разработке</p>
+                        </div>
+                        <div class="bio-item">
+                            <div class="decor-circle"></div>
+                            <p>Стек: <span class="highlight">Java, Spring, React</span></p>
+                        </div>
+                        <div class="bio-item">
+                            <div class="decor-circle"></div>
+                            <p>Философия: <span class="highlight">Код как искусство</span></p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="cta-buttons">
+                    <a href="/works" class="btn primary-btn hover-effect">Мои работы</a>
+                    <a href="https://t.me/nnn_15999" class="btn outline-btn hover-effect" target="_blank">
+                        Написать в Telegram
+                        <span class="btn-arrow">→</span>
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+    <script src="js/app.js"></script>
+</body>
+</html>
